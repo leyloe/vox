@@ -1,5 +1,6 @@
 
 #include <Engine/Window.hpp>
+#include "Window.hpp"
 
 void framebuffer_size_callback(GLFWwindow *window, int width, int height)
 {
@@ -28,6 +29,11 @@ namespace engine
     void Window::setFramebufferSizeCallback()
     {
         glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+    }
+
+    void Window::swapBuffers()
+    {
+        return glfwSwapBuffers(window);
     }
 
     void Window::initWindow(int w, int h, std::string name)

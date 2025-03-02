@@ -24,5 +24,6 @@ namespace engine
 
         bool shouldClose();
         void setFramebufferSizeCallback();
+        void swapBuffers();
     };
 }
