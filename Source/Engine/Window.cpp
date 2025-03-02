@@ -9,6 +9,8 @@ namespace engine
 
     Window::~Window()
     {
+        glfwDestroyWindow(window);
+
         glfwTerminate();
     }
 
@@ -26,6 +28,11 @@ namespace engine
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
         window = glfwCreateWindow(w, h, name.c_str(), nullptr, nullptr);
+
+        if (!window)
+        {
+            throw std::runtime_error("Failed to create GLFW window");
+        }
 
         glfwMakeContextCurrent(window);
     }
