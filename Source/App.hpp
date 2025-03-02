@@ -1,5 +1,6 @@
 #pragma once
 
+#include <Engine/GraphicsContext.hpp>
 #include <Engine/Window.hpp>
 
 namespace engine
@@ -14,6 +15,7 @@ namespace engine
 
     private:
         Window window{WIDTH, HEIGHT, "window"};
+        GraphicsContext context{WIDTH, HEIGHT};
     };
 
 }

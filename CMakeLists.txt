@@ -12,6 +12,7 @@ set(SOURCES
     ${SOURCE_DIR}/Main.cpp
     ${SOURCE_DIR}/App.cpp
     ${SOURCE_DIR}/Engine/Window.cpp
+    ${SOURCE_DIR}/Engine/GraphicsContext.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
