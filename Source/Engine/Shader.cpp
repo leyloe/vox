@@ -83,7 +83,7 @@ namespace engine
         glDeleteProgram(ID);
     }
 
-    void Shader::Activate()
+    void Shader::activate()
     {
         glUseProgram(ID);
     }

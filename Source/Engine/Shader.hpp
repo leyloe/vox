@@ -21,6 +21,6 @@ namespace engine
         Shader(const std::string &vertexFile, const std::string &fragmentFile);
         ~Shader();
 
-        void Activate();
+        void activate();
     };
 }

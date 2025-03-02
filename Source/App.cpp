@@ -39,7 +39,7 @@ namespace engine
         GLuint uniID = glGetUniformLocation(shaderProgram.ID, "scale");
 
         int widthImg, heightImg, numColCh;
-        unsigned char *bytes = stbi_load("grass_side.png", &widthImg, &heightImg, &numColCh, 0);
+        unsigned char *bytes = stbi_load("../Textures/grass_side.png", &widthImg, &heightImg, &numColCh, 0);
 
         GLuint texture;
         glGenTextures(1, &texture);
@@ -58,6 +58,10 @@ namespace engine
         stbi_image_free(bytes);
         glBindTexture(GL_TEXTURE_2D, 0);
 
+        GLuint tex0Uni = glGetUniformLocation(shaderProgram.ID, "tex0");
+        shaderProgram.activate();
+        glUniform1i(tex0Uni, 0);
+
         while (!window.shouldClose())
         {
             window.processInputEsc();
@@ -65,9 +69,14 @@ namespace engine
             glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
             glClear(GL_COLOR_BUFFER_BIT);
 
-            shaderProgram.Activate();
+            shaderProgram.activate();
+
             glUniform1f(uniID, 0.5f);
+
+            glBindTexture(GL_TEXTURE_2D, texture);
+
             VAO.bind();
+
             glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
             window.swapBuffers();
