@@ -1,6 +1,7 @@
 #pragma once
 
 #include <glad/glad.h>
+#include <Engine/Window.hpp>
 #include <stdexcept>
 
 namespace engine
@@ -8,10 +9,10 @@ namespace engine
     class GraphicsContext
     {
     private:
-        void initGraphicsContext(int w, int h);
+        void initGraphicsContext(Window &window);
 
     public:
-        GraphicsContext(int w, int h);
+        GraphicsContext(Window &window);
     };
 
 }

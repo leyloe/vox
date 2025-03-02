@@ -15,7 +15,7 @@ namespace engine
 
     private:
         Window window{WIDTH, HEIGHT, "window"};
-        GraphicsContext context{WIDTH, HEIGHT};
+        GraphicsContext context{window};
     };
 
 }

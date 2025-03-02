@@ -2,18 +2,19 @@
 
 namespace engine
 {
-    void GraphicsContext::initGraphicsContext(int w, int h)
+    void GraphicsContext::initGraphicsContext(Window &window)
     {
         if (!gladLoadGL())
         {
             throw std::runtime_error("Failed to initialize GLAD");
         }
 
-        glViewport(0, 0, w, h);
+        glViewport(0, 0, window.width, window.height);
     }
 
-    GraphicsContext::GraphicsContext(int w, int h)
+    GraphicsContext::GraphicsContext(Window &window)
     {
-        initGraphicsContext(w, h);
+        initGraphicsContext(window);
     }
+
 }
