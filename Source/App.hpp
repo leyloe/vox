@@ -2,6 +2,9 @@
 
 #include <Engine/GraphicsContext.hpp>
 #include <Engine/Window.hpp>
+#include <Engine/VAO.hpp>
+#include <Engine/EBO.hpp>
+#include <Engine/Shader.hpp>
 
 namespace engine
 {
@@ -16,9 +19,6 @@ namespace engine
     private:
         Window window{WIDTH, HEIGHT, "window"};
         GraphicsContext context{window};
-
-        void preRender();
-        void renderLoop();
     };
 
 }

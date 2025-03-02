@@ -1,4 +1,4 @@
-#include "EBO.hpp"
+#include <Engine/EBO.hpp>
 
 namespace engine
 {
