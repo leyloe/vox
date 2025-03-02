@@ -11,11 +11,11 @@ namespace engine
     {
     private:
         std::string windowName;
+        GLFWwindow *_window;
 
         void initWindow(int w, int h, std::string name);
 
     public:
-        GLFWwindow *_window;
         const int width;
         const int height;
 
