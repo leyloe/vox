@@ -4,11 +4,12 @@ project(vox)
 
 set(SOURCE_DIR Source)
 set(INCLUDE_DIR Include)
+set(THIRD_PARTY_SOURCE_DIR ThirdParty)
 
 set(INCLUDES ${SOURCE_DIR} ${INCLUDE_DIR})
 
 set(SOURCES
-    ${SOURCE_DIR}/glad.c
+    ${THIRD_PARTY_SOURCE_DIR}/glad/glad.c
     ${SOURCE_DIR}/Main.cpp
     ${SOURCE_DIR}/App.cpp
     ${SOURCE_DIR}/Engine/Window.cpp
