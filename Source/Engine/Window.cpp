@@ -16,24 +16,24 @@ namespace engine
 
     Window::~Window()
     {
-        glfwDestroyWindow(window);
+        glfwDestroyWindow(_window);
 
         glfwTerminate();
     }
 
     bool Window::shouldClose()
     {
-        return glfwWindowShouldClose(window);
+        return glfwWindowShouldClose(_window);
     }
 
     void Window::setFramebufferSizeCallback()
     {
-        glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+        glfwSetFramebufferSizeCallback(_window, framebuffer_size_callback);
     }
 
     void Window::swapBuffers()
     {
-        return glfwSwapBuffers(window);
+        return glfwSwapBuffers(_window);
     }
 
     void Window::initWindow(int w, int h, std::string name)
@@ -44,12 +44,12 @@ namespace engine
         glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 4);
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-        window = glfwCreateWindow(w, h, name.c_str(), nullptr, nullptr);
+        _window = glfwCreateWindow(w, h, name.c_str(), nullptr, nullptr);
 
-        if (!window)
+        if (!_window)
             throw std::runtime_error("Failed to create GLFW window");
 
-        glfwMakeContextCurrent(window);
+        glfwMakeContextCurrent(_window);
     }
 
 }

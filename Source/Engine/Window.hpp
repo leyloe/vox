@@ -10,12 +10,12 @@ namespace engine
     class Window
     {
     private:
-        GLFWwindow *window;
         std::string windowName;
 
         void initWindow(int w, int h, std::string name);
 
     public:
+        GLFWwindow *_window;
         const int width;
         const int height;
 
