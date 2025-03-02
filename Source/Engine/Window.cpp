@@ -1,6 +1,11 @@
 
 #include <Engine/Window.hpp>
 
+void framebuffer_size_callback(GLFWwindow *window, int width, int height)
+{
+    glViewport(0, 0, width, height);
+}
+
 namespace engine
 {
     Window::Window(int w, int h, std::string name) : width{w}, height{h}, windowName{name}
@@ -18,11 +23,6 @@ namespace engine
     bool Window::shouldClose()
     {
         return glfwWindowShouldClose(window);
-    }
-
-    void framebuffer_size_callback(GLFWwindow *window, int width, int height)
-    {
-        glViewport(0, 0, width, height);
     }
 
     void Window::SetFramebufferSizeCallback()
@@ -47,4 +47,5 @@ namespace engine
 
         glfwMakeContextCurrent(window);
     }
+
 }
