@@ -16,6 +16,8 @@ namespace engine
     private:
         Window window{WIDTH, HEIGHT, "window"};
         GraphicsContext context{window};
+
+        void renderLoop();
     };
 
 }

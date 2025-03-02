@@ -11,7 +11,7 @@ namespace engine
     {
     private:
         std::string windowName;
-        GLFWwindow *_window;
+        GLFWwindow *window;
 
         void initWindow(int w, int h, std::string name);
 
@@ -25,5 +25,6 @@ namespace engine
         bool shouldClose();
         void setFramebufferSizeCallback();
         void swapBuffers();
+        void processInputEsc();
     };
 }
