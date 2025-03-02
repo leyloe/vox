@@ -1,6 +1,4 @@
 #include <App.hpp>
-#include <glm/glm.hpp>
-#include <stb/stb_image.h>
 
 namespace engine
 {
@@ -22,7 +20,7 @@ namespace engine
                 0, 3, 2  // Lower triangle
             };
 
-        engine::Shader shaderProgram{"Shaders/Default.vert", "Shaders/Default.frag"};
+        engine::Shader shaderProgram{"../Shaders/Default.vert", "../Shaders/Default.frag"};
 
         engine::VAO VAO;
         VAO.bind();
@@ -39,6 +37,9 @@ namespace engine
         EBO.unbind();
 
         GLuint uniID = glGetUniformLocation(shaderProgram.ID, "scale");
+
+        int widthImg, heightImg, numColCh;
+        unsigned char *bytes = stbi_load("grass_side.png", &widthImg, &heightImg, &numColCh, 0);
 
         while (!window.shouldClose())
         {

@@ -10,6 +10,7 @@ set(INCLUDES ${SOURCE_DIR} ${INCLUDE_DIR})
 
 set(SOURCES
     ${THIRD_PARTY_SOURCE_DIR}/glad/glad.c
+    ${THIRD_PARTY_SOURCE_DIR}/stb/stb.c
     ${SOURCE_DIR}/Main.cpp
     ${SOURCE_DIR}/App.cpp
     ${SOURCE_DIR}/Engine/Window.cpp
