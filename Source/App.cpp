@@ -1,4 +1,3 @@
-#include <glad/glad.h>
 #include <App.hpp>
 
 namespace engine
