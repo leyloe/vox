@@ -1,5 +1,7 @@
+#pragma once
+
 #include <glad/glad.h>
-#include <VBO.hpp>
+#include <Engine/VBO.hpp>
 
 namespace engine
 {

@@ -9,7 +9,7 @@ void framebuffer_size_callback(GLFWwindow *window, int width, int height)
 
 namespace engine
 {
-    Window::Window(int w, int h, std::string name) : width{w}, height{h}, windowName{name}
+    Window::Window(int w, int h, const std::string &name) : width{w}, height{h}, windowName{name}
     {
         initWindow(w, h, name);
     }
@@ -42,7 +42,7 @@ namespace engine
             glfwSetWindowShouldClose(window, true);
     }
 
-    void Window::initWindow(int w, int h, std::string name)
+    void Window::initWindow(int w, int h, const std::string &name)
     {
         glfwInit();
 

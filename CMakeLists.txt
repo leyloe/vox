@@ -14,6 +14,10 @@ set(SOURCES
     ${SOURCE_DIR}/App.cpp
     ${SOURCE_DIR}/Engine/Window.cpp
     ${SOURCE_DIR}/Engine/GraphicsContext.cpp
+    ${SOURCE_DIR}/Engine/EBO.cpp
+    ${SOURCE_DIR}/Engine/VBO.cpp
+    ${SOURCE_DIR}/Engine/VAO.cpp
+    ${SOURCE_DIR}/Engine/Shader.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
