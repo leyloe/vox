@@ -41,9 +41,7 @@ namespace engine
         window = glfwCreateWindow(w, h, name.c_str(), nullptr, nullptr);
 
         if (!window)
-        {
             throw std::runtime_error("Failed to create GLFW window");
-        }
 
         glfwMakeContextCurrent(window);
     }
