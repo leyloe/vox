@@ -1,12 +1,14 @@
 #version 460 core
 
-out vec4 FragColor;
+layout (location = 0) in vec3 aPos;
+layout (location = 1) in vec3 aColor;
 
-
-in vec3 color;
+out vec3 color;
+uniform float scale;
 
 
 void main()
 {
-	FragColor = vec4(color, 1.0f);
+	gl_Position = vec4(aPos.x + aPos.x * scale, aPos.y + aPos.y * scale, aPos.z + aPos.z * scale, 1.0);
+	color = aColor;
 }
