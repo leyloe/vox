@@ -14,7 +14,7 @@ namespace engine
         VAO();
         ~VAO();
 
-        void LinkVBO(VBO &VBO, GLuint layout);
+        void linkVBO(VBO &VBO, GLuint layout);
 
         void bind();
         void unbind();
