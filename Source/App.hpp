@@ -13,7 +13,7 @@ namespace engine
         void run();
 
     private:
-        Window window{WIDTH, HEIGHT, "Hello OpenGL!"};
+        Window window{WIDTH, HEIGHT, "window"};
     };
 
 }
