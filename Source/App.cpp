@@ -39,6 +39,7 @@ namespace engine
         GLuint uniID = glGetUniformLocation(shaderProgram.ID, "scale");
 
         int widthImg, heightImg, numColCh;
+        stbi_set_flip_vertically_on_load(true);
         unsigned char *bytes = stbi_load("../Textures/grass_side.png", &widthImg, &heightImg, &numColCh, 0);
 
         GLuint texture;
