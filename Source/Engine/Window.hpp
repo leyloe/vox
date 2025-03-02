@@ -1,5 +1,6 @@
 #pragma once
 
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <string>
 #include <stdexcept>
@@ -22,5 +23,6 @@ namespace engine
         ~Window();
 
         bool shouldClose();
+        void SetFramebufferSizeCallback();
     };
 }

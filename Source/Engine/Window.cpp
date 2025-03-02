@@ -1,3 +1,4 @@
+
 #include <Engine/Window.hpp>
 
 namespace engine
@@ -17,6 +18,16 @@ namespace engine
     bool Window::shouldClose()
     {
         return glfwWindowShouldClose(window);
+    }
+
+    void framebuffer_size_callback(GLFWwindow *window, int width, int height)
+    {
+        glViewport(0, 0, width, height);
+    }
+
+    void Window::SetFramebufferSizeCallback()
+    {
+        glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     }
 
     void Window::initWindow(int w, int h, std::string name)

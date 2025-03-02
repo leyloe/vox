@@ -10,6 +10,8 @@ namespace engine
         }
 
         glViewport(0, 0, window.width, window.height);
+
+        window.SetFramebufferSizeCallback();
     }
 
     GraphicsContext::GraphicsContext(Window &window)
