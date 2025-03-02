@@ -23,6 +23,6 @@ namespace engine
         ~Window();
 
         bool shouldClose();
-        void SetFramebufferSizeCallback();
+        void setFramebufferSizeCallback();
     };
 }

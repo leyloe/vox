@@ -11,7 +11,7 @@ namespace engine
 
         glViewport(0, 0, window.width, window.height);
 
-        window.SetFramebufferSizeCallback();
+        window.setFramebufferSizeCallback();
     }
 
     GraphicsContext::GraphicsContext(Window &window)

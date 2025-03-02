@@ -25,7 +25,7 @@ namespace engine
         return glfwWindowShouldClose(window);
     }
 
-    void Window::SetFramebufferSizeCallback()
+    void Window::setFramebufferSizeCallback()
     {
         glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     }
