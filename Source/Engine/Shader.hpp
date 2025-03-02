@@ -10,10 +10,10 @@ namespace engine
 {
     class Shader
     {
-    private:
-        GLuint ID;
 
     public:
+        GLuint ID;
+
         Shader(const std::string &vertexFile, const std::string &fragmentFile);
         ~Shader();
 
