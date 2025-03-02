@@ -17,6 +17,7 @@ namespace engine
         Window window{WIDTH, HEIGHT, "window"};
         GraphicsContext context{window};
 
+        void preRender();
         void renderLoop();
     };
 
