@@ -10,7 +10,7 @@ namespace engine
         GLuint ID;
 
     public:
-        EBO(GLfloat *vertices, GLsizeiptr size);
+        EBO(GLuint *indices, GLsizeiptr size);
         ~EBO();
 
         void bind();
