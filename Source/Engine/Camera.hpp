@@ -1,10 +1,14 @@
 #pragma once
 
+#define GLM_ENABLE_EXPERIMENTAL
 #include <glad/glad.h>
-#include <glm/ext/matrix_transform.hpp>
-#include <glm/ext/matrix_clip_space.hpp>
-#include <glm/gtc/type_ptr.hpp>
 #include <GLFW/glfw3.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include <glm/gtx/rotate_vector.hpp>
+#include <glm/gtx/vector_angle.hpp>
+
 #include <Engine/Shader.hpp>
 
 namespace engine
@@ -22,7 +26,7 @@ namespace engine
         int width;
         int height;
 
-        float speed = 0.1f;
+        float speed = 0.01f;
         float sensitivity = 100.0f;
 
         Camera(int width, int height, glm::vec3 position);
