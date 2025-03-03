@@ -19,6 +19,7 @@ set(SOURCES
     ${SOURCE_DIR}/Engine/VBO.cpp
     ${SOURCE_DIR}/Engine/VAO.cpp
     ${SOURCE_DIR}/Engine/Shader.cpp
+    ${SOURCE_DIR}/Engine/Texture.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})

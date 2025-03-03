@@ -5,8 +5,8 @@
 #include <Engine/VAO.hpp>
 #include <Engine/EBO.hpp>
 #include <Engine/Shader.hpp>
-#include <stb/stb_image.h>
 #include <glm/glm.hpp>
+#include <Engine/Texture.hpp>
 
 namespace engine
 {
