@@ -50,6 +50,19 @@ namespace engine
 
             shaderProgram.activate();
 
+            glm::mat4 model = glm::mat4(1.0f);
+            glm::mat4 view = glm::mat4(1.0f);
+            glm::mat4 proj = glm::mat4(1.0f);
+            view = glm::translate(view, glm::vec3(0.0f, -0.5f, -2.0f));
+            proj = glm::perspective(glm::radians(45.0f), (float)(window.width / window.height), 0.1f, 100.0f);
+
+            int modelLoc = glGetUniformLocation(shaderProgram.ID, "model");
+            glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+            int viewLoc = glGetUniformLocation(shaderProgram.ID, "view");
+            glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+            int projLoc = glGetUniformLocation(shaderProgram.ID, "proj");
+            glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(proj));
+
             glUniform1f(uniID, 0.5f);
 
             grass.bind();
