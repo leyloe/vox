@@ -6,12 +6,11 @@ namespace engine
 {
     class EBO
     {
-    private:
-        GLuint ID;
-
     public:
         EBO(GLuint *indices, GLsizeiptr size);
         ~EBO();
+
+        GLuint ID;
 
         void bind();
         void unbind();
