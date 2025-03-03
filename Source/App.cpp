@@ -47,6 +47,8 @@ namespace engine
 
         engine::Camera camera{WIDTH, HEIGHT, glm::vec3(0.0f, 0.0f, 2.0f)};
 
+        GLFWwindow *_window = window.window;
+
         while (!window.shouldClose())
         {
             window.processInputEsc();
