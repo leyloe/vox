@@ -11,8 +11,9 @@ namespace engine
     public:
         GLuint ID;
         GLenum type;
+        GLuint unit;
 
-        Texture(const char *image, GLenum texType, GLenum slot, GLenum format, GLenum pixelType);
+        Texture(const char *image, GLenum texType, GLuint slot, GLenum format, GLenum pixelType);
         ~Texture();
 
         void texUnit(Shader &shader, const char *uniform, GLuint unit);

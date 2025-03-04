@@ -12,6 +12,7 @@ namespace engine
 
     void Texture::bind()
     {
+        glActiveTexture(GL_TEXTURE0 + unit);
         glBindTexture(type, ID);
     }
 
@@ -24,7 +25,7 @@ namespace engine
     {
         glDeleteTextures(1, &ID);
     }
-    Texture::Texture(const char *image, GLenum texType, GLenum slot, GLenum format, GLenum pixelType)
+    Texture::Texture(const char *image, GLenum texType, GLuint slot, GLenum format, GLenum pixelType)
     {
         type = texType;
 
@@ -33,7 +34,8 @@ namespace engine
         unsigned char *bytes = stbi_load(image, &widthImg, &heightImg, &numColCh, 0);
 
         glGenTextures(1, &ID);
-        glActiveTexture(slot);
+        glActiveTexture(GL_TEXTURE0 + slot);
+        unit = slot;
         glBindTexture(texType, ID);
 
         glTexParameteri(texType, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_LINEAR);
@@ -42,6 +44,7 @@ namespace engine
         glTexParameteri(texType, GL_TEXTURE_WRAP_S, GL_REPEAT);
         glTexParameteri(texType, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
+        /* if you use GL_CLAMP_TO_BORDER */
         // float flatColor[] = {1.0f, 1.0f, 1.0f, 1.0f};
         // glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, flatColor);
 
