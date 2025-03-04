@@ -40,7 +40,7 @@ namespace engine
 
         GLuint uniID = glGetUniformLocation(shaderProgram.ID, "scale");
 
-        Texture texture{"../Textures/sandstone_normal.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE};
+        Texture texture{"../Textures/grass_side.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE};
         texture.texUnit(shaderProgram, "tex0", 0);
 
         glEnable(GL_DEPTH_TEST);
